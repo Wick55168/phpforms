@@ -1,9 +1,9 @@
 <?php
 header('Access-Control-Allow-Origin: *');
-
-header('Access-Control-Allow-Methods: GET, POST');
-
-header("Access-Control-Allow-Headers: X-Requested-With");
+header('Access-Control-Allow-Methods: GET, PUT, POST, DELETE, PATCH, OPTIONS');
+header('Content-Type: application/json');
+header('Access-Control-Allow-Credentials: true');
+header('Access-Control-Allow-Headers: Origin, X-Requested-With, Content-Type, Accept, Authorization');
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Retrieve all submitted fields
     $name = $_POST["name"];
